@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/gmg_MCKAYCR.egg-info/PKG-INFO
+src/gmg_MCKAYCR.egg-info/SOURCES.txt
+src/gmg_MCKAYCR.egg-info/dependency_links.txt
+src/gmg_MCKAYCR.egg-info/top_level.txt

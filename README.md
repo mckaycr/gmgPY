@@ -11,7 +11,7 @@ pip install gmg
 It's not published yet, so this won't work until I feel like its ready
 ## Example
 ```
-import gmgPY
+import gmg
 myGrill = GreenMountainGrill(IPADDRESS, PORT);
 
 print(myGrill.status())
@@ -34,13 +34,13 @@ This is a work in progress so not all methods are available yet.
 
 When initiating your grill, you will need the IP address of your grill, and the port which is most likely 8080.
 
-### status(callback);
+### status();
 This method will return the data from the grill and make it available within the callback function.
 
-### power(on/off,callback);
+### power(on/off);
 Hopefully this will be the power control for the grill, accepting one parameter indicating either on or off, and a callback to handle what happens next.
 
-### temp(device, temp, callback);
+### temp(device, temp);
 Available devices should be:
 - ```'grill'``` - This would set the temp for the grill
 - ```'probe1'``` - This would set the desired food temp for probe 1

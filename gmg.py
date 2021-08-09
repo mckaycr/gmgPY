@@ -75,11 +75,11 @@ class GreenMountainGrill:
         return data
     
     def __readBuf(self, bytes):
-        my_list = [bytes[probeTemp]+(bytes[probeTempHigh]*256),bytes[probeSetTemp]+(bytes[probeSetTemp]*256),bytes[probeTemp2],bytes[probeSetTemp2]]
+        probes = [bytes[probeTemp]+(bytes[probeTempHigh]*256),bytes[probeSetTemp]+(bytes[probeSetTemp]*256),bytes[probeTemp2],bytes[probeSetTemp2]]
         data = {
             'temp':bytes[grillTemp]+bytes[grillTempHigh]*256,
             'tempSet': bytes[grillSetTemp]+bytes[grillSetTempHigh]*256,
-            'probe': [{'temp':k,'tempSet':v} for k,v in [my_list[i:i+2] for i in range(0,len(my_list),2)]],
+            'probe': [{'temp':k,'tempSet':v} for k,v in [probes[i:i+2] for i in range(0,len(probes),2)]],
             'state':{
                 'power': grillStates[bytes[grillState]],
                 'fire':fireStates[bytes[fireState]],
